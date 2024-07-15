@@ -12,21 +12,21 @@ const Navbar : React.FC = () => {
             <div className='flex'>
             <NavLink to={"/home"}
              className={({ isActive }) => {
-                return `lg:py-2 px-5 text-white rounded-md hover:bg-violet-800 hover:text-white border-b-2 flex gap-2 items-center m-2 ${
+                return `lg:py-2 px-5 text-white rounded-md bg-violet-500 hover:bg-violet-800 hover:text-white border-b-2 flex gap-2 items-center m-2 ${
                   isActive ? `text-white bg-violet-500` : ""
                 }`}}
                 >
-             Login
+             Home
             </NavLink>
             {/*  */}
-            <NavLink to={"/user/sign-up"}
+            {/* <NavLink to={"/user/add-Question"}
              className={({ isActive }) => {
                 return `lg:py-3 px-5 -white text-white bg-black    rounded-md hover:bg-gray-700 hover:text-white border-b-2 flex gap-2 items-center m-2 ${
                   isActive ? `text-white bg-black border-white` : ""
                 }`}}
                 >
-             Get Started 
-            </NavLink>
+             Add-Questop
+            </NavLink> */}
             </div>
          </ul>
          <div className={`w-full  bg-gray-100}`}>
