@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import confetti from 'canvas-confetti';
 import axios from "axios";
 import { IQuestion } from "../types/types";
+import { BACKEND_URL } from "../constants/constants";
 
 const QuizPage: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -21,7 +22,7 @@ const QuizPage: React.FC = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/quiz/questions');
+        const response = await axios.get(BACKEND_URL);
         if (response.data && response.data.data) {
           setQuestions(response.data.data);
         }
